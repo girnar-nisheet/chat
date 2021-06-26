@@ -1,0 +1,20 @@
+<div class="list">
+    <mat-list role="list">
+        <mat-list-item *ngFor="let msg of messages" role="listitem">
+            <div class="list-item">
+                <mat-card>
+                        <mat-card-title>{{msg.message}}</mat-card-title>
+                    <mat-card-content>
+                        <p></p>
+                    </mat-card-content>
+                    <mat-card-footer>{{msg.from_name}}<em class="timestamp">{{msg.timestamp | date:'medium'}}</em></mat-card-footer>
+                </mat-card>
+            </div>
+        </mat-list-item>
+    </mat-list>
+</div>
+
+<div class="bottom-fixed-footer">
+    <input type="text" #msg placeholder="Type your message here ...">
+    <button mat-raised-button color="primary" (click)="sendMessage(msg.value);msg.value='';">SEND</button>
+</div>

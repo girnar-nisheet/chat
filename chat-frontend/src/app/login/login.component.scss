@@ -1,0 +1,15 @@
+.container {
+    // padding : 16px;
+    width   : 100vw;
+    height  : 100vh;
+    overflow: hidden;
+}
+
+.center {
+    width: 40vw;
+    min-width: 200px;
+    margin-top: 40vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}

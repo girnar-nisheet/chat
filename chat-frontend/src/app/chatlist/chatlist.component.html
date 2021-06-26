@@ -1,0 +1,50 @@
+<div class="container">
+    <mat-toolbar>
+        <span>LIVE USERS</span>
+    </mat-toolbar>
+    <mat-divider></mat-divider>
+    <mat-selection-list [multiple]="false">
+        <mat-list-option *ngFor="let user of liveUsers" [value]="user" (click)="onChatClick(user)">
+            <div>
+                <span>
+                    <fa-icon [icon]="fa.faUser"></fa-icon>&nbsp;&nbsp;
+                </span>
+                {{user.name}}
+            </div>
+        </mat-list-option>
+        <mat-list-option *ngIf="!liveUsers?.length">
+            <div>
+                No other live users found.
+            </div>
+        </mat-list-option>
+    </mat-selection-list>
+
+    <br><br>
+
+    <mat-toolbar>
+        <span>LIVE ROOMS</span>
+        <span style="flex: 1 1 auto;"></span>
+        <span>
+            <button mat-raised-button color="primary" (click)="createRoom()">Create Group</button>
+        </span>
+    </mat-toolbar>
+    <mat-divider></mat-divider>
+    <mat-selection-list [multiple]="false">
+        <mat-list-option *ngFor="let room of liveRooms" [value]="room" (click)="onRoomClick(room)">
+            <div>
+                <span>
+                    <fa-icon [icon]="fa.faUsers"></fa-icon>&nbsp;&nbsp;
+                </span>
+                {{room.name}}
+            </div>
+        </mat-list-option>
+        <mat-list-option *ngIf="!liveRooms?.length">
+            <div>
+                No live rooms found.
+            </div>
+        </mat-list-option>
+    </mat-selection-list>
+    <br>
+
+
+</div>

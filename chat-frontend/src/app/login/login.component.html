@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="center">
+        <div>
+            <h3>CHAT - LOGIN</h3>
+        </div>
+        <form name="loginForm">
+            <mat-form-field style="width: 100%;" appearance="fill">
+                <mat-label>Username</mat-label>
+                <input matInput type="text" placeholder="Please enter a unique username" #username>
+                <mat-hint>Please enter a unique username</mat-hint>
+            </mat-form-field>
+            <br>
+            <br>
+            <div>
+                <button mat-raised-button color="primary" type="button" (click)="proceed(username.value)">Proceed</button>
+            </div>
+        </form>
+    </div>    
+</div>
