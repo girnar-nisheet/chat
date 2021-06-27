@@ -12,3 +12,8 @@ cd ./chat-frontend
 npm install
 ng serve
 ```
+
+## Ques 2 - Query Ans
+```
+cat db-queries.js
+``` 
